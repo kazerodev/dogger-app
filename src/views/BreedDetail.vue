@@ -76,6 +76,9 @@ const { data: imageUrl, isLoading, isError } = useQuery({
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   background-color: #e0e0e0;
   min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-placeholder {
@@ -87,9 +90,11 @@ const { data: imageUrl, isLoading, isError } = useQuery({
 }
 
 .breed-image {
-  width: 100%;
-  height: auto;
   display: block;
+  max-width: 100%;
+  max-height: 500px;
+  width: auto;
+  height: auto;
   opacity: 0;
   transition: opacity 0.5s ease;
 }
