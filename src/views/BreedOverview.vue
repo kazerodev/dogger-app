@@ -69,6 +69,7 @@ function goToBreed(breed) {
 .breed-card {
   cursor: pointer;
   transition: transform 0.2s ease !important;
+  border-left: 3px solid #2d8a4e !important;
 }
 
 .breed-card:hover {
@@ -76,18 +77,14 @@ function goToBreed(breed) {
 }
 
 .breed-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.4rem 0;
+  padding: 0.3rem 0;
+  text-align: center;
 }
 
 .breed-name {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 600;
   text-transform: capitalize;
   color: #2d8a4e;
-  text-align: center;
 }
 </style>

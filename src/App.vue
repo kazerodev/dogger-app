@@ -11,7 +11,7 @@ const themeOverrides = {
   <n-config-provider :theme-overrides="themeOverrides">
     <div class="app">
       <header class="header">
-        <router-link to="/" class="logo">Dogger</router-link>
+        <router-link to="/" class="logo">Dogger App</router-link>
       </header>
       <main class="main">
         <router-view v-slot="{ Component }">

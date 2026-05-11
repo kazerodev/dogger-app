@@ -34,12 +34,16 @@ const { data: imageUrl, isLoading, isError } = useQuery({
 
     <div v-else class="image-container">
       <div class="image-wrap">
+        <div v-if="!imageLoaded" class="image-placeholder">
+          <n-spin size="large" />
+        </div>
         <img
           :src="imageUrl"
           :alt="breed"
           class="breed-image"
           :class="{ visible: imageLoaded }"
           @load="imageLoaded = true"
+          @error="imageLoaded = true"
         />
       </div>
     </div>
@@ -66,11 +70,20 @@ const { data: imageUrl, isLoading, isError } = useQuery({
 }
 
 .image-wrap {
+  position: relative;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   background-color: #e0e0e0;
   min-height: 300px;
+}
+
+.image-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .breed-image {
